@@ -1,4 +1,4 @@
-int type double linked list. 
+* int type double linked list. 
 
 compilation:
 	gcc -o dllist dlinklist.c main.c;
@@ -9,3 +9,7 @@ documentation:
 	mkdir doc;
 	doxygne Doxyfile;
 
+* simple binary tree
+
+compilation:
+	as descriteb above
