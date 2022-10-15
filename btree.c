@@ -1,9 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
 #include <math.h>
+#include "btree.h"
 
-#define BT_TYPE int
 #define UNUSED(x) (void)(x)
 
 #define USE_RECURSION 0
@@ -25,26 +24,6 @@ void print_string(char *x) {printf("%s\n", x); }
         char: print_char, \
 		char*: print_string)(X)
 
-typedef struct node node_t;
-struct node
-{
-	node_t *parent_node;
-	node_t *left;
-	node_t *right;
-	BT_TYPE val;
-};
-
-typedef struct
-{
-	node_t *root_node;
-}bt_t;
-
-typedef struct
-{	
-	void (*action)(node_t *node);
-	void *param;
-	void *returns;
-}BT_ARGS_t;
 BT_ARGS_t btArgs;
 
 inline BT_TYPE getLeftNodeVal(node_t *node);
@@ -413,6 +392,7 @@ int insert(node_t *bt, BT_TYPE val)
 	return 0;
 }
 
+#if(0)
 int main(int argc, int **argv)
 {
 	
@@ -443,3 +423,4 @@ int main(int argc, int **argv)
 	
 return 0;
 }
+#endif
